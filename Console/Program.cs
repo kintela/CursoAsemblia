@@ -6,27 +6,39 @@ namespace Consola
     {
         static void Main(string[] args)
         {
-            Message message = new Message();
-            message.Name = "Roberto";
+            Console.WriteLine("Write Time 1");
+            string time1 = Console.ReadLine();
 
-            Message message1 = new Message();
-            message1.Name = "Roberto";
+            Console.WriteLine("Write Time 2");
+            string time2 = Console.ReadLine();
 
+            int minutes1 = GetMinutes(time1);
+            int minutes2 = GetMinutes(time2);
 
+            int totalMinutes = minutes1 + minutes2;
 
-            //string name1 = "ROBERTO";
-            //string name2 = "ROBERTO";
+            Console.WriteLine("Total Minutes " + totalMinutes);
 
-            Console.WriteLine(message.GetHashCode());
-            Console.WriteLine(message1.GetHashCode());
-            Console.WriteLine(message.Equals(message1));
+            int hours = totalMinutes / 60;
+            int minutes = totalMinutes % 60;
 
-            Console.WriteLine(Object.ReferenceEquals(message,message1));
-
-
+            Console.WriteLine("Total:" + String.Format("{0:00}", hours) + ":" + String.Format("{0:00}", minutes));
+            Console.WriteLine("Press any key to exit");
             Console.ReadLine();
-
-
         }
+
+        private static int GetMinutes(string time1)
+        {
+            string[] parts = time1.Split(":");
+
+            if (!Int32.TryParse(parts[0], out var hours))
+                return 0;
+
+            if (!Int32.TryParse(parts[1], out var minutes))
+                return 0;
+
+            return (hours * 60) + minutes;
+        }
+
     }
 }

@@ -40,5 +40,8 @@ namespace ConsoleApp2
 
         public static bool operator ==(Time x, Time y) => x.Equals(y);
         public static bool operator !=(Time x, Time y) => !x.Equals(y);
+        public static int operator *(Time x, Time y) => x.TotalMinutes * y.TotalMinutes;
+        public static int operator /(Time x, Time y) => x.TotalMinutes / y.TotalMinutes;
+
     }
 }
