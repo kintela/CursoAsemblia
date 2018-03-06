@@ -39,31 +39,35 @@ namespace ConsoleCSV
 
         static void Main3(string[] args)
         {
-            string fileName = @"C:\borrame\ejemplo.csv";
+            //string fileName = @"C:\borrame\ejemplo.csv";
 
-            List<OrderDocument> orderDocumentList = new List<OrderDocument>();
+            //OrderDocument2 od = new OrderDocument2();
 
-            using (var sr=new StreamReader(fileName))
-            {
-                var csv = new CsvReader(sr);
-                csv.Configuration.HasHeaderRecord = false;
-                csv.Configuration.Delimiter = ";";
-                IEnumerable<OrderDocument> records = csv.GetRecords<OrderDocument>().ToList();
-               
-            }
+
+            //using (var sr=new StreamReader(fileName))
+            //{
+            //    var csv = new CsvReader(sr);
+            //    csv.Configuration.HasHeaderRecord = false;
+            //    csv.Configuration.Delimiter = ";";
+            //    IEnumerable<OrderItem> records = csv.GetRecords<OrderItem>();
+            //    od.OrderItems = records.ToList();
+
+            //}            
         }
 
         static void Main(string[] args)
         {
             string fileName = @"C:\borrame\ejemplo.csv";
-
-            OrderDocument od = new OrderDocument(File.Open(fileName,FileMode.Open));
-
             
-            Console.WriteLine(od.OrderItems.Where(c=>c.Id==1).FirstOrDefault().Id);
-            
+            OrderDocument2 od = new OrderDocument2(File.Open(fileName, FileMode.Open));
+
+            Console.WriteLine(od.OrderItems.Where(c => c.Id == 1).FirstOrDefault().Id);
 
             Console.ReadLine();
+
+            //OrderDocument od = new OrderDocument(File.Open(fileName,FileMode.Open));
+            //Console.WriteLine(od.OrderItems.Where(c=>c.Id==1).FirstOrDefault().Id);
+
         }
     }
 }
