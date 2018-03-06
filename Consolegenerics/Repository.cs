@@ -12,14 +12,7 @@
             };
 
         }
-
-        //public object FindById2(object item, int id)
-        //{
-        //    if (item.Id == id)
-        //        return item;
-        //    else
-        //        return null;
-        //}
+        
 
         public T FindById<T>(T item, int id)
             where T:IIdentity
