@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using CsvHelper;
 
@@ -8,17 +9,28 @@ namespace ConsoleCSV
 {
     public class OrderDocument
     {
-        private int id;
-        private int cantidad;
-        private string codigoArticulo;
+        private readonly Stream document;
 
-        public int Id { set => id = value; }
-        public int Cantidad { set => cantidad = value; }
-        public string CodigoArticulo { set => codigoArticulo = value; }
+        public IEnumerable<OrderItem> OrderItems
+        {
+            get
+            {
+                using (var sr = new StreamReader(document))
+                {
+                    var csv = new CsvReader(sr);
+                    csv.Configuration.HasHeaderRecord = false;
+                    csv.Configuration.Delimiter = ";";
+                    while (csv.Read())
+                    {
+                        yield return csv.GetRecord<OrderItem>();
+                    }                    
+                }
 
-        //public OrderDocument(Stream Document)
-        //{
-
-        //}
+            }
+        }
+        public OrderDocument(Stream document)
+        {
+            this.document = document;
+        }
     }
 }
