@@ -16,12 +16,19 @@ namespace ConsoleAppIEnumerable
 
             //Console.ReadLine();
 
-            var myList = new List2();
+            Party party = new Party();
+            party.AddGuest(new Guest() { Age = 25, Name = "John" });
+            party.AddGuest(new Guest() { Age = 24, Name = "Barbara" });
+            party.AddGuest(new Guest() { Age = 24, Name = "Phil" });
+            party.AddGuest(new Guest() { Age = 23, Name = "Fred" });
+            party.AddGuest(new Guest() { Age = 26, Name = "Hannah" });
+            party.AddGuest(new Guest() { Age = 27, Name = "Cindy" });
 
-            foreach (var item in myList)
+            foreach (Guest guest in party)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(guest.Name);
             }
+
 
             Console.ReadLine();
         }

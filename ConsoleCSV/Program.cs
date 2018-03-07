@@ -59,9 +59,11 @@ namespace ConsoleCSV
         {
             string fileName = @"C:\borrame\ejemplo.csv";
             
-            OrderDocument2 od = new OrderDocument2(File.Open(fileName, FileMode.Open));
+            OrderDocument od = new OrderDocument(File.Open(fileName, FileMode.Open));
 
             Console.WriteLine(od.OrderItems.Where(c => c.Id == 1).FirstOrDefault().Id);
+
+            //od.OrderItems.Add(new OrderItem { Id = 3, Cantidad = 3000, CodigoArticulo = "falda" });
 
             Console.ReadLine();
 
