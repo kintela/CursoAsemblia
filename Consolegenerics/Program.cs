@@ -9,30 +9,22 @@ namespace ConsoleGenerics
         static void Main(string[] args)
         {
 
-            //var repository = new Repository2();
-
-            //var result = repository.Add(new Person()
-            //{
-            //    Name = "Iñaki",
-            //    LastName="Elcoro",
-            //    Age=30
-            //});
-
-            //Person personAdded = (Person)result.Item;
-
             var list = new List<Person>
             {
                 new Person(){
+                    Id=1,
                     Name="Iñaki",
                     LastName="Elcoro-Uribe",
                     Age=18
                 },
                 new Person(){
+                    Id=2,
                     Name="Roberto",
                     LastName="Quintela-Modia",
                     Age=18
                 },
                 new Person(){
+                    Id=3,
                     Name="Ainara",
                     LastName="Riesco",
                     Age=18
@@ -43,9 +35,9 @@ namespace ConsoleGenerics
 
             var repository = new Repository();
 
-            var result = repository.Add<Person>(person);
+            var result = repository.Create<Person>();
 
-            var result2 = repository.Add(person);
+           
         }
     }
 }
