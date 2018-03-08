@@ -7,31 +7,46 @@ namespace ConsoleTime
     public class Time
     {
         private string time;
-        private int totalMinutes;
+        private int providedMinutes;
 
         public int TotalMinutes
         {
             get
             {
-                string[] parts = time.Split(":");
-
-                if (!Int32.TryParse(parts[0], out var hours))
-                {
-                    totalMinutes = 0;
-                }
-
-
-                if (!Int32.TryParse(parts[1], out var minutes))
-                {
-                    totalMinutes = 0;
-                }
-
-                totalMinutes = (hours * 60) + minutes;
-
-                return totalMinutes;
+                return Parse(time);
             }
 
-             set => totalMinutes=value;
+        }        
+
+        private int Parse(string time)
+        {          
+            
+            if (string.IsNullOrEmpty(time))
+            {
+                return providedMinutes;
+            }
+
+            int totalMinutes = 0;
+            string[] parts = time.Split(":");
+
+            if (!Int32.TryParse(parts[0], out var hours))
+            {
+                totalMinutes = 0;
+            }
+
+            if (!Int32.TryParse(parts[1], out var minutes))
+            {
+                totalMinutes = 0;
+            }
+
+            totalMinutes = (hours * 60) + minutes;
+
+            return totalMinutes;
+        }
+
+        public int TotalHours
+        {
+            get=> Parse(time) / 60;
         }
 
         public Time(string time)
@@ -41,7 +56,7 @@ namespace ConsoleTime
 
         public Time(int totalMinutes)
         {
-            TotalMinutes = totalMinutes;
+            providedMinutes = totalMinutes;
         }
 
         public static implicit operator Time(string input)=>new Time(input);
