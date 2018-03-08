@@ -75,7 +75,6 @@ namespace ConsoleTime
         public override bool Equals(object obj) => TotalMinutes == ((Time)obj).TotalMinutes;
        
 
-
         public static bool operator ==(Time x, Time y) => x.Equals(y);
         public static bool operator !=(Time x, Time y) => !x.Equals(y);
     }

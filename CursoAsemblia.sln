@@ -13,11 +13,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppIEnumerable", "Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleGenerics", "Consolegenerics\ConsoleGenerics.csproj", "{AA4484FD-219A-43D1-B889-3EC8A3FB2558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleClases", "ConsoleClases\ConsoleClases.csproj", "{A43247E7-9816-4B1D-BD52-E7E3756D7E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClases", "ConsoleClases\ConsoleClases.csproj", "{A43247E7-9816-4B1D-BD52-E7E3756D7E61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTime", "ConsoleTime\ConsoleTime.csproj", "{3BB39403-1F0E-46EB-8DCA-A621EA0B8D08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTime", "ConsoleTime\ConsoleTime.csproj", "{3BB39403-1F0E-46EB-8DCA-A621EA0B8D08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleDelegates", "ConsoleDelegates\ConsoleDelegates.csproj", "{F438272C-2CF7-42AA-9739-9961D3860AA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleDelegates", "ConsoleDelegates\ConsoleDelegates.csproj", "{F438272C-2CF7-42AA-9739-9961D3860AA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNullable", "ConsoleNullable\ConsoleNullable.csproj", "{538683AB-22A2-42D2-AC35-201B9521D6E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleZip", "ConsoleZip\ConsoleZip.csproj", "{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{F438272C-2CF7-42AA-9739-9961D3860AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F438272C-2CF7-42AA-9739-9961D3860AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F438272C-2CF7-42AA-9739-9961D3860AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{538683AB-22A2-42D2-AC35-201B9521D6E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{538683AB-22A2-42D2-AC35-201B9521D6E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{538683AB-22A2-42D2-AC35-201B9521D6E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{538683AB-22A2-42D2-AC35-201B9521D6E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
