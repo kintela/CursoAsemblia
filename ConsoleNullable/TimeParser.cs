@@ -7,7 +7,7 @@ namespace ConsoleNullable
     public class TimeParser
     {
         private readonly string time;
-        
+
         public TimeParser(string time)
         {
             //if (String.IsNullOrEmpty(time))
@@ -30,7 +30,7 @@ namespace ConsoleNullable
 
             //this.cualquierCosa = cualquierCosa == null ? throw new ArgumentNullException(nameof(cualquierCosa)) : cualquierCosa;
 
-            //this.cualquierCosa = cualquierCosa ?? throw new ArgumentNullException(nameof(cualquierCosa));
+            this.cualquierCosa = cualquierCosa ?? throw new ArgumentNullException(nameof(cualquierCosa));
 
 
 

@@ -6,8 +6,8 @@ namespace ConsoleTime
 {
     public class Time
     {
-        private string time;
         private int providedMinutes;
+        private string time;        
 
         public int TotalMinutes
         {
@@ -15,12 +15,10 @@ namespace ConsoleTime
             {
                 return Parse(time);
             }
-
         }        
 
         private int Parse(string time)
-        {          
-            
+        {                      
             if (string.IsNullOrEmpty(time))
             {
                 return providedMinutes;
@@ -44,20 +42,23 @@ namespace ConsoleTime
             return totalMinutes;
         }
 
-        public int TotalHours
-        {
-            get=> Parse(time) / 60;
-        }
-
         public Time(string time)
         {
-            this.time = time;  
+            this.time = time;
         }
 
         public Time(int totalMinutes)
         {
             providedMinutes = totalMinutes;
         }
+
+
+        public int TotalHours
+        {
+            get => TotalMinutes / 60;            
+        }
+
+        //get=> Parse(time) / 60;
 
         public static implicit operator Time(string input)=>new Time(input);
 
