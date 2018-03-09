@@ -6,8 +6,10 @@ namespace ConsoleAppLogMetodos
     {       
         static void Main(string[] args)
         {
-            bool test = RunMethod(Method1);
+            RunMethod(Method1);
+            RunMethod(Method2);
 
+            Console.ReadLine();
         }
 
         public static int Method1(string input)
@@ -21,11 +23,12 @@ namespace ConsoleAppLogMetodos
         }
 
 
-        public static bool RunMethod(Func<string, int> methodName)
+        public static void RunMethod(Func<string, int> methodName)
         {
-            int i = methodName("pepe");
+            Console.WriteLine($"Start Method {methodName}");
+            int i = methodName("text");
+            Console.WriteLine($"End Method { methodName}");            
 
-            return true;
         }
     }
 }
