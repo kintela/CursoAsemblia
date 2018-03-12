@@ -56,7 +56,6 @@ namespace ConsoleAppLINQ
             var sumaEdades = ordenados.Sum(a => a.Age);
 
 
-
             Console.ReadLine();
 
         }

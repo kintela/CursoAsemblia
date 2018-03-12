@@ -7,12 +7,7 @@ using System.Linq;
 namespace ConsoleAppLogMetodos
 {
     public class PropertyLogger
-    {
-        public void LogProperty2<TResult>(Func<TResult> property)
-        {
-            var value = property();
-
-        }
+    {        
 
         public void LogProperty<TResult>(Expression<Func<TResult>> property)
         {
@@ -40,6 +35,12 @@ namespace ConsoleAppLogMetodos
             method.Compile()();
 
             Console.WriteLine("Method Called");
+
+        }
+
+        public void LogProperty2<TResult>(Func<TResult> property)
+        {
+            var value = property();
 
         }
     }
