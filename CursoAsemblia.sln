@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleNullable", "ConsoleN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleZip", "ConsoleZip\ConsoleZip.csproj", "{F6AEC513-5FD4-4140-B4BD-76292BAE0C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppDelegates", "ConsoleAppDelegates\ConsoleAppDelegates.csproj", "{C195398A-CEE6-4E57-A621-310414F423AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppDelegates", "ConsoleAppDelegates\ConsoleAppDelegates.csproj", "{C195398A-CEE6-4E57-A621-310414F423AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppLogMetodos", "ConsoleAppLogMetodos\ConsoleAppLogMetodos.csproj", "{209E435C-B20C-4058-B6AE-C8C1B6C6863F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppLogMetodos", "ConsoleAppLogMetodos\ConsoleAppLogMetodos.csproj", "{209E435C-B20C-4058-B6AE-C8C1B6C6863F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppLINQ", "ConsoleAppLINQ\ConsoleAppLINQ.csproj", "{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{209E435C-B20C-4058-B6AE-C8C1B6C6863F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209E435C-B20C-4058-B6AE-C8C1B6C6863F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209E435C-B20C-4058-B6AE-C8C1B6C6863F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
