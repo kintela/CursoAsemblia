@@ -20,22 +20,26 @@ namespace ConsoleAppLogMetodos
             Console.ReadLine();
         }
 
-        static void Main3(string[] args)
+        static void Main(string[] args)
         {
             var logger = new MethodLogger();
             var repository = new PersonRepository();
-            
-            logger.RunAndLog(()=>repository.Save(new Person()));
 
-            var person = logger.RunAndLog(()=>repository.GetById(10));
+            ////logger.RunAndLog((p)=>repository.Save(new Person()));
+
+
+            logger.RunAndLog((s,i)=>repository.Get("Quintela",10));
+
+
+            //var person = logger.RunAndLog(()=>repository.GetById(10));
             //logger.RunAndLog(() => repository.GetById(10));
 
-            logger.RunAndLog(()=>repository.Get("Quintela",10));
+            
 
             Console.ReadLine();
         }
 
-        static void Main(string[] args)
+        static void Main4(string[] args)
         {
             var logger = new PropertyLogger();
 
