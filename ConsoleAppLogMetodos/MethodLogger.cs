@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace ConsoleAppLogMetodos
 {
@@ -9,11 +10,27 @@ namespace ConsoleAppLogMetodos
 
         public void RunAndLog(Action method)
         {
-            Console.WriteLine("Calling to method");
+            var parameters = method.Method.GetParameters().Select(p => p.Name);
+            var parameterNames = String.Join(",", parameters);
+
+            Console.WriteLine($"Calling to method {method.Method.Name}");
+
+            Console.WriteLine(parameterNames);
 
             method();
 
             Console.WriteLine("Method called");
+        }
+
+        public TREsult RunAndLog<TREsult>(Func<TREsult> method)
+        {
+            Console.WriteLine("Calling to method");
+
+            var result=method();
+
+            Console.WriteLine("Method called");
+
+            return result;
         }
 
         //public void RunAndLog(Action<Person> method)
