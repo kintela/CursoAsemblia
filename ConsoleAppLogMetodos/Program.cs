@@ -5,16 +5,29 @@ namespace ConsoleAppLogMetodos
     class Program
     {       
 
-        static void Main(string[] args)
+        static void Main2(string[] args)
         {
             RunMethod(Method1);
             RunMethod(Method2);
 
             RunMethod2(Method3);
+            RunMethod2(Method4);
 
             RunMethod3(5, Method5);
             RunMethod3("pepe", Method6);
             RunMethod4("pepe", Method7);
+
+            Console.ReadLine();
+        }
+
+        static void Main(string[] args)
+        {
+            var logger = new MethodLogger();
+            var repository = new PersonRepository();
+
+            logger.RunAndLog(()=>repository.GetById(10));
+            logger.RunAndLog(()=>repository.Save(new Person()));
+            logger.RunAndLog(()=>repository.Get("Quintela",10));
 
             Console.ReadLine();
         }
@@ -62,7 +75,7 @@ namespace ConsoleAppLogMetodos
             Console.WriteLine($"End Method { method}");            
 
         }
-        //Métodos con un parametro int y que devuelven string
+        //Métodos con un parametro string y que devuelve int
         public static void RunMethod2(Func<string,int> method)
         {
             Console.WriteLine($"Start Method {method.Method.Name}");
@@ -75,19 +88,30 @@ namespace ConsoleAppLogMetodos
         public static void RunMethod3<T,TResult>(T inputParameter, Func<T, TResult> method)
         {
             Console.WriteLine($"Start Method {method.Method.Name}");
-            TResult result = method(inputParameter);
+            //No hago nada con TREsult asi que podria pasar de el y solamente ejecutar el metodo sin mas
+            TResult result =method(inputParameter);
             Console.WriteLine($"End Method { method}");
 
         }
 
         //Métodos con un parametro de cualquier tipo y que devuelve cualquier tipo
-        public static void RunMethod4<T>(T inputParameter, Func<T> method)
+        public static void RunMethod4<T>(T inputParameter, Action<T> method)
         {
             Console.WriteLine($"Start Method {method.Method.Name}");
             method(inputParameter);
             Console.WriteLine($"End Method { method}");
 
         }
+
+        //Métodos con cualquier numero de parametros y devuelva o no
+        public static void RunMethod5<T>(T inputParameter, Action<T> method)
+        {
+            Console.WriteLine($"Start Method {method.Method.Name}");
+            method(inputParameter);
+            Console.WriteLine($"End Method { method}");
+
+        }
+
 
     }
 }
