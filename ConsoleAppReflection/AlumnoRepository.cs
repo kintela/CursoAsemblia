@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace ConsoleAppReflection
 {
@@ -42,7 +43,7 @@ namespace ConsoleAppReflection
 
         }
 
-        public void Select<T>()
+        public void Select<T>(object whereParts)
         {
             var tipo = typeof(T);
             
@@ -50,7 +51,32 @@ namespace ConsoleAppReflection
 
             var tablename = tipo.GetCustomAttribute<TableAttribute>();
 
-            Console.WriteLine($"Select {string.Join(",", propiedades.Select(p => p.Name))} from {tablename.Name}");
+            TypeInfo tipoWhere = whereParts.GetType().GetTypeInfo();
+
+            var propiedadesWhere = tipoWhere.GetProperties();
+
+            var where = "where ";
+
+            foreach (var item in propiedadesWhere)
+            {
+                
+                var valor=item.GetValue(whereParts);
+
+                if (item.PropertyType == typeof(String))
+                {
+                    where += $"{item.Name} = '{valor}' and ";
+                }
+                else
+                {
+                    where += $"{item.Name} = {valor} and ";
+                }
+            }
+
+
+            where = where.Substring(0, where.Length - 5);
+            
+
+            Console.WriteLine($"Select {string.Join(",", propiedades.Select(p => p.Name))} from {tablename.Name} {where}");
 
         }
 

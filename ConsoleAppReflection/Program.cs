@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ConsoleAppReflection
 {
@@ -11,8 +12,11 @@ namespace ConsoleAppReflection
             
             var repository = new AlumnoRepository();
 
-            repository.Select<Alumno>();
-            repository.Select<Person>();
+            repository.Select<Person>(new
+            {
+                Id = 1,
+                LastName = "Quintela"
+            });
 
             Console.ReadLine();
 
