@@ -21,6 +21,9 @@ namespace ConsoleAppLINQ
             
         }
 
+       
+
+
         static void Main(string[] args)
         {
             var alumnos = new List<Alumno>()
@@ -37,8 +40,12 @@ namespace ConsoleAppLINQ
                 new Alumno(){ Age=18, Name="Ainara", LastName="Riesco"}
             };
 
-            public static string StringJoin<T>(this IEnumerable<T> list) => list.Aggregate()
 
+            var list = new List<string>() { "1", "2", "3", "4" };
+
+            Console.WriteLine(list.StringJoin());
+
+            Console.WriteLine(alumnos2.StringJoin());
 
 
             //var filtrados = alumnos.Where(a => a.Age < 23).ToList();
@@ -59,9 +66,21 @@ namespace ConsoleAppLINQ
             //var sumaEdades = ordenados.Sum(a => a.Age);
 
 
-
             Console.ReadLine();
 
         }
+    }  
+}
+namespace System.Linq
+{
+    public static class Extensions
+    {
+        public static string StringJoin<T>(this IEnumerable<T> list)
+        {
+            return list.Aggregate(String.Empty, (current, next) => $"{current},{next}");
+
+        }
     }
+
+
 }
