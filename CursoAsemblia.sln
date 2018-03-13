@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppLogMetodos", "Con
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppLINQ", "ConsoleAppLINQ\ConsoleAppLINQ.csproj", "{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppReflection", "ConsoleAppReflection\ConsoleAppReflection.csproj", "{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC711FC0-2BC7-48B2-8306-4709DBD71EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
