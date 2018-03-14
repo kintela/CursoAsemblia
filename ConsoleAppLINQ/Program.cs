@@ -26,12 +26,6 @@ namespace ConsoleAppLINQ
 
         static void Main(string[] args)
         {
-            var alumnos = new List<Alumno>()
-            {
-                new Alumno(){ Age=21, Name="Iñaki", LastName="Elcoro"},
-                new Alumno(){ Age=23, Name="Robeto", LastName="Quintela"},
-                new Alumno(){ Age=18, Name="Ainara", LastName="Riesco"}
-            };
 
             var alumnos2 = new List<Alumno>()
             {
@@ -41,11 +35,23 @@ namespace ConsoleAppLINQ
             };
 
 
-            var list = new List<string>() { "1", "2", "3", "4" };
-
-            Console.WriteLine(list.StringJoin());
-
             Console.WriteLine(alumnos2.StringJoin());
+
+            Console.ReadLine();
+
+            //var list = new List<string>() { "1", "2", "3", "4" };
+
+            //Console.WriteLine(list.StringJoin());
+
+            //Console.ReadLine();
+
+            //var alumnos = new List<Alumno>()
+            //{
+            //    new Alumno(){ Age=21, Name="Iñaki", LastName="Elcoro"},
+            //    new Alumno(){ Age=23, Name="Robeto", LastName="Quintela"},
+            //    new Alumno(){ Age=18, Name="Ainara", LastName="Riesco"}
+            //};
+
 
 
             //var filtrados = alumnos.Where(a => a.Age < 23).ToList();
@@ -66,7 +72,7 @@ namespace ConsoleAppLINQ
             //var sumaEdades = ordenados.Sum(a => a.Age);
 
 
-            Console.ReadLine();
+            //Console.ReadLine();
 
         }
     }  

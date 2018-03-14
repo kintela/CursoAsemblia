@@ -57,6 +57,8 @@ namespace ConsoleAppReflection
 
             var where = "where ";
 
+            propiedadesWhere.Aggregate((current,next)=>current);
+
             foreach (var item in propiedadesWhere)
             {
                 
