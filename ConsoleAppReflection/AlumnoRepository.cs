@@ -46,7 +46,7 @@ namespace ConsoleAppReflection
         public void Select<T>(object whereParts)
         {
             var tipo = typeof(T);
-            
+
             var propiedades = tipo.GetProperties();
 
             var tablename = tipo.GetCustomAttribute<TableAttribute>();
@@ -55,30 +55,10 @@ namespace ConsoleAppReflection
 
             var propiedadesWhere = tipoWhere.GetProperties();
 
-            var where = "where ";
-
-            propiedadesWhere.Aggregate((current,next)=>current);
-
-            foreach (var item in propiedadesWhere)
-            {
-                
-                var valor=item.GetValue(whereParts);
-
-                if (item.PropertyType == typeof(String))
-                {
-                    where += $"{item.Name} = '{valor}' and ";
-                }
-                else
-                {
-                    where += $"{item.Name} = {valor} and ";
-                }
-            }
-
-
-            where = where.Substring(0, where.Length - 5);
-            
+            var where = " where " + String.Join(" and ", propiedadesWhere.Select(p => p.PropertyType==typeof(String)? $"{p.Name}='{p.GetValue(whereParts)}'" : $" {p.Name}={p.GetValue(whereParts)}"));
 
             Console.WriteLine($"Select {string.Join(",", propiedades.Select(p => p.Name))} from {tablename.Name} {where}");
+           
 
         }
 

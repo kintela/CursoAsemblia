@@ -86,6 +86,12 @@ namespace System.Linq
             return list.Aggregate(String.Empty, (current, next) => $"{current},{next}");
 
         }
+
+        public static string StringJoin<T>(this IEnumerable<string> list)
+        {
+            return list.Aggregate((current,next)=>$"{current},{next}");
+
+        }
     }
 
 

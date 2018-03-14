@@ -21,26 +21,19 @@ namespace ConsoleAppReflection
 
         }
 
-        static void Main3(string[] args)
+       
+    }
+}
+namespace System.Linq
+{
+    public static class Extensions
+    {
+        public static string StringJoin<T>(this IEnumerable<T> list)
         {
-            var alumno = new Alumno()
-            {
-                Id=1,
-                Name="Roberto"
-            };
-
-            var person = new Person()
-            {
-                Id = 1,
-                LastName = "Quintela"
-            };
-            var repository = new AlumnoRepository();
-
-            repository.Select(alumno);
-            repository.Select(person);
-
-            Console.ReadLine();
+            return list.Aggregate(String.Empty, (current, next) => $"{current},{next}");
 
         }
     }
+
+
 }
