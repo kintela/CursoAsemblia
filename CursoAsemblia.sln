@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppLINQ", "ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppReflection", "ConsoleAppReflection\ConsoleAppReflection.csproj", "{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppQueryObjectPattern", "ConsoleAppQueryObjectPattern\ConsoleAppQueryObjectPattern.csproj", "{ED044236-D2C8-4DE2-A83A-49AD1B74A5B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EABF6F72-AC90-4A72-B9A7-53CCEE7DD109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED044236-D2C8-4DE2-A83A-49AD1B74A5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED044236-D2C8-4DE2-A83A-49AD1B74A5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED044236-D2C8-4DE2-A83A-49AD1B74A5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED044236-D2C8-4DE2-A83A-49AD1B74A5B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
